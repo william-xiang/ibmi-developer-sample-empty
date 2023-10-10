@@ -13,8 +13,8 @@ components:
       memoryLimit: 2G
       mountSources: true
       volumeMounts:
-        - name: ibmi
-          path: /home/user/.ibmi
-  - name: ibmi
+        - name: user
+          path: /home/user
+  - name: user
     volume:
       size: 1G
