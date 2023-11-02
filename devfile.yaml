@@ -13,8 +13,8 @@ components:
       memoryLimit: 2G
       mountSources: true
       volumeMounts:
-        - name: user
-          path: /home/user
-  - name: user
+        - name: ssh
+          path: /home/user/.ssh
+  - name: ssh
     volume:
       size: 1G
