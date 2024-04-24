@@ -4,11 +4,11 @@ metadata:
 components:
   - name: tools
     container:
-      image: registry.redhat.io/devspaces/udi-rhel8:3.8
+      image: registry.redhat.io/devspaces/udi-rhel8:3.12
       endpoints:
         - exposure: public
           name: ibmi-developer
           protocol: http
           targetPort: 3000
-      memoryLimit: 2G
+      memoryLimit: '2Gi'
       mountSources: true
