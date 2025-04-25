@@ -4,7 +4,7 @@ metadata:
 components:
   - name: tools
     container:
-      image: registry.redhat.io/devspaces/udi-rhel8:3.12
+      image: cp.icr.io/cp/ibmi-merlin/udi-rhel8@sha256:0a1288c3f6f5159e555007867a76131f2e456538fdac2c7436a870544fa6bbba
       endpoints:
         - exposure: public
           name: ibmi-developer
@@ -12,3 +12,9 @@ components:
           targetPort: 3000
       memoryLimit: '2Gi'
       mountSources: true
+      volumeMounts:
+        - name: home
+          path: /home/user/
+  - name: home
+    volume:
+      size: 1G
